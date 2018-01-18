@@ -1,0 +1,86 @@
+-- Supported values for orientation:
+-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+
+settings = {
+	
+	orientation = {
+		default = "landscapeRight",
+		supported = { "landscapeRight",}
+	},
+	
+	iphone = {
+		plist = {
+
+
+		      	CFBundleIconFile = "Icon.png",
+						CFBundleIconFiles = {
+						"Icon.png" ,
+						"Icon@2x.png" ,
+						"Icon-72.png",
+						"Icon-xxhdpi.png",
+						"Icon-hdpi.png"
+						},
+						
+			UIStatusBarHidden = false,
+			UIPrerenderedIcon = true, -- set to false for "shine" overlay
+			--UIApplicationExitsOnSuspend = true, -- uncomment to quit app on suspend
+
+        
+
+
+            --[[
+            -- iOS app URL schemes:
+            CFBundleURLTypes =
+            {
+                {
+                    CFBundleURLSchemes =
+                    {
+                        "fbXXXXXXXXXXXXXX", -- example scheme for facebook
+                        "coronasdkapp", -- example second scheme
+                    }
+                }
+            }
+            --]]
+		}
+	},
+	
+
+	-- Android permissions
+
+	androidPermissions = {
+  		"android.permission.INTERNET",
+  		"android.permission.VIBRATE",
+  	  --  "android.permission.ACCESS_NETWORK_STATE",
+       -- "android.permission.READ_PHONE_STATE",
+  	},
+
+	
+android =  
+
+{
+	
+
+ googlePlayGamesAppId = "1093344193242"  --long App ID number (use yours!)
+
+},
+
+
+plugins =
+
+ {
+
+--["CoronaProvider.ads.admob"] =	
+
+ ["CoronaProvider.gameNetwork.google"] =
+
+{
+	
+
+
+publisherId = "com.coronalabs",
+
+     }, 
+
+   },
+
+}
